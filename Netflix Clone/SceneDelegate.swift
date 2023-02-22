@@ -11,17 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        //MARK: Projeyi programmatic yapacağımız için açılış ekranı belirledik. (MainTapbarViewController)
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
         window?.rootViewController = MainTapbarViewController()
         window?.makeKeyAndVisible()
-        
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

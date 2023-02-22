@@ -7,12 +7,14 @@
 
 import UIKit
 
+/// Burayı tabBar olarak değiştirdik.
 class MainTapbarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemPink
         
+        // Tek tek tabBar oluşturduk.
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: UpcomingViewController())
         let vc3 = UINavigationController(rootViewController: SearchViewController())
@@ -30,6 +32,7 @@ class MainTapbarViewController: UITabBarController {
         
         view.tintColor = .label
         
+        // Sayfaları tabBar' a ekledik.
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
     }
 }
