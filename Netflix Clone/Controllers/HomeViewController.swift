@@ -155,14 +155,4 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let offSet = scrollView.contentOffset.y + defaultOffSet
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offSet))
     }
-    
 }
-
-
-
-
-
-
-
-
-
