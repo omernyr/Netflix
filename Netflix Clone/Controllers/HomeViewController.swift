@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovies = 0
+    case TrendingTV = 1
+    case Popular = 2
+    case UpcomingMovies = 3
+    case TopRated = 4
+}
+
 class HomeViewController: UIViewController {
     
     let sectionTitle: [String] = ["Trending Movies", "Trending TV", "Popular", "Upcoming Movies", "Top Rated"]
@@ -33,63 +41,6 @@ class HomeViewController: UIViewController {
         configureNavbar()
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
-        
-        fetchData()
-    }
-    
-    private func fetchData() {
-        // MARK: get Trending Movies
-        //        API_Caller.shared.fetchTrendingMovies { results in
-        //
-        //            switch results {
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        
-        // MARK: get Trending TVs
-        //        API_Caller.shared.fetchTrendingTV { results in
-        //            switch results {
-        //            case .success(let TVs):
-        //                print(TVs)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //
-        //        }
-        
-        // MARK: get Upcoming Movies
-        //        API_Caller.shared.fetchUpcomingMovies { results in
-        //            switch results {
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //
-        //        }
-        
-        // MARK: get Popular Movies
-        //        API_Caller.shared.fetchPopularMovies { results in
-        //            switch results {
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        
-        // MARK: get Top Rated Movies
-        API_Caller.shared.fetchTopRatedMovies { results in
-            switch results {
-            case .success(let movies):
-                print(movies)
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
     
     private func configureNavbar() {
@@ -135,6 +86,58 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
+        switch indexPath.section {
+        case Sections.TrendingMovies.rawValue:
+            API_Caller.shared.fetchTrendingMovies { results in
+                switch results {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        case Sections.TrendingTV.rawValue:
+            API_Caller.shared.fetchTrendingTV { results in
+                switch results {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        case Sections.Popular.rawValue:
+            API_Caller.shared.fetchPopularMovies { results in
+                switch results {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        case Sections.UpcomingMovies.rawValue:
+            API_Caller.shared.fetchUpcomingMovies { results in
+                switch results {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        case Sections.TopRated.rawValue:
+            API_Caller.shared.fetchTopRatedMovies { results in
+                switch results {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        default:
+            return UITableViewCell()
+        }
+        
+        
         return cell
     }
     
