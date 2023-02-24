@@ -114,4 +114,24 @@ final class API_Caller {
         }
         task.resume()
     }
+    
+    func search(with query: String, completion: @escaping Handler) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        guard let url = URL(string: "\(Constant.baseURL)/3/search/movie?api_key=\(Constant.API_KEY)&query=\(query)") else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+        
+            guard let data = data, error == nil else { return }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                print(results.results)
+                completion(.success(results.results))
+            } catch {
+                completion(.failure(DataError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
 }
