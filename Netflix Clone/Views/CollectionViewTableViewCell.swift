@@ -47,7 +47,6 @@ class CollectionViewTableViewCell: UITableViewCell {
             self?.collectionView.reloadData() 
         }
     }
-    
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -65,10 +64,4 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return titles.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print((titles[indexPath.row].original_title != nil) ? titles[indexPath.row].original_title : titles[indexPath.row].original_name)
-    }
-    
-    
 }
