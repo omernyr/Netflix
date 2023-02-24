@@ -31,7 +31,7 @@ final class API_Caller {
                 completion(.failure(DataError.failedToGetData))
             }
         }
-        task.resume()   
+        task.resume()
     }
     
     func fetchTrendingTV(completion: @escaping Handler) {
@@ -93,7 +93,23 @@ final class API_Caller {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
                 completion(.success(results.results))
             } catch {
-                completion(.failure(DataError.failedToGetData)) 
+                completion(.failure(DataError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
+    
+    func fetchDiscoverMovies(completion: @escaping Handler) {
+        guard let url = URL(string: "\(Constant.baseURL)/3/discover/movie?api_key=\(Constant.API_KEY)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate") else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else { return }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                completion(.success(results.results))
+            } catch {
+                completion(.failure(DataError.failedToGetData))
             }
         }
         task.resume()
