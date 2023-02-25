@@ -8,9 +8,9 @@
 import UIKit
 
 class CollectionViewTableViewCell: UITableViewCell {
-
+    
     static let identifier = "CollectionViewTableViewCell"
-
+    
     private var titles: [Title] = [Title]()
     
     // MARK: CollectionView oluşturduk.
@@ -44,7 +44,7 @@ class CollectionViewTableViewCell: UITableViewCell {
     public func configure(with titles: [Title]) {
         self.titles = titles
         DispatchQueue.main.async { [weak self] in
-            self?.collectionView.reloadData() 
+            self?.collectionView.reloadData()
         }
     }
 }
@@ -63,5 +63,21 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return titles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let title = titles[indexPath.row]
+        guard let titleName = title.original_name ?? title.original_title else { return }
+        
+        API_Caller.shared.getMovie(with: titleName + " trailer") { results in
+            switch results {
+            case .success(let videoElement):
+                print(videoElement.id)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
