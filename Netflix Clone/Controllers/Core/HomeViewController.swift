@@ -30,26 +30,22 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
-        
         /// TableView ımızı sayfaya ekledik.
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
-        
         configureNavbar()
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-
+        navigationController?.pushViewController(TitlePreviewViewController() , animated: true)
     }
     
     private func configureNavbar() {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-        
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
@@ -138,8 +134,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return UITableViewCell()
         }
-        
-        
         return cell
     }
     
