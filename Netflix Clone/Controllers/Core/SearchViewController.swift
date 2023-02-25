@@ -89,7 +89,7 @@ extension SearchViewController: UISearchResultsUpdating {
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
               query.trimmingCharacters(in: .whitespaces).count >= 3,
               let resultsController = searchController.searchResultsController as? SearchResultsViewController else { return }
-        
+              
         API_Caller.shared.search(with: query) { results in
             DispatchQueue.main.async {
                 switch results {
