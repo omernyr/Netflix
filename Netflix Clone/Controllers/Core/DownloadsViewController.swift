@@ -8,10 +8,15 @@
 import UIKit
 
 class DownloadsViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
+        title = "Downloads"
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
