@@ -32,17 +32,7 @@
   - iOS, macOS ready.
 
 ## Screenshots
-- <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png">
-
-(https://user-images.githubusercontent.com/89137487/222142921-9eb6c15d-1222-4be7-8b9f-84d99be434cf.png)
-(https://user-images.githubusercontent.com/89137487/222142959-fe4bca64-a4cb-4434-9dbf-880c1cf38815.png)
-(https://user-images.githubusercontent.com/89137487/222142968-2b0f5450-d23b-4b72-92e9-6c0da565755d.png)
-(https://user-images.githubusercontent.com/89137487/222143018-3396b0ff-6784-43c2-a3c0-dc5d5509a97a.png)
-(https://user-images.githubusercontent.com/89137487/222143040-763cd837-98a7-4f55-8498-cc51d5f4dcd3.png)
-(https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png)
-
-
-
+- <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222142921-9eb6c15d-1222-4be7-8b9f-84d99be434cf.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222142959-fe4bca64-a4cb-4434-9dbf-880c1cf38815.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222142968-2b0f5450-d23b-4b72-92e9-6c0da565755d.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143018-3396b0ff-6784-43c2-a3c0-dc5d5509a97a.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143040-763cd837-98a7-4f55-8498-cc51d5f4dcd3.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png">
 
 ## Installation
 
@@ -51,10 +41,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) instal
 ==========================================================================================
  ```bash
  # Clone this repository
- $ git clone https://github.com/232-Pazarama-iOS-Swift-Bootcamp/week4_hw4-asimcanyagiz
+ $ git clone https://github.com/omernyr/Netflix-Clone
  ```
  # Go into the repository
- - open BazaarWay with xCode
+ - open Netflix-Clone with xCode
  
  # Go into xCode
  - File > Packages > Reset Package Caches
@@ -69,7 +59,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) instal
 
 ## Download
 
-You can [download](https://github.com/asimcanyagiz/BazaarWay) the latest installable version of Calculator for macOS and Linux.
+You can [download](https://github.com/omernyr/Netflix-Clone) the latest installable version of Calculator for macOS and Linux.
 
 ## Technologies Used
 
@@ -94,17 +84,10 @@ You can [download](https://github.com/asimcanyagiz/BazaarWay) the latest install
   </tr>
 </table>
 
-## Credits
-
-Patika.dev - iOS Swift Pazarama Bootcamp
-
 ## You may also like...
 
-- [Calculator](https://github.com/asimcanyagiz/iOS-Bootcamp-Week1) - A iOS Calculator
-- [dice-mania](https://github.com/asimcanyagiz/dice-mania) - Dice Mania
-- [Metunes](https://github.com/asimcanyagiz/Metunes) - Metunes
-- [Asian-Kitchen](https://github.com/asimcanyagiz/asian-kitchen) - Asian Kitchen Order Page
-- [Flickgram](https://github.com/asimcanyagiz/Flickgram) - Flickgram
+- [BuyMe](https://github.com/omernyr/BuyMe) - A Shop App
+- [CryptoApp](https://github.com/omernyr/CryptoApp) - CryptoApp
 
 ## License
 
