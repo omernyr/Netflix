@@ -24,7 +24,8 @@
 * Lottie Animations
 * Fully SPM build
 * Live Video
-  - ![netflixclone](https://user-images.githubusercontent.com/89137487/222146551-7acc482d-71ea-4e3b-8494-8e97138be41a.gif)
+  - ![netflixclone](https://user-images.githubusercontent.com/89137487/222147517-cc4003ad-6940-4f1e-844d-a3fda72f18a4.gif)
+
 
 
 
