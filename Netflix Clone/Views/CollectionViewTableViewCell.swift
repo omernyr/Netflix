@@ -59,7 +59,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { results in
             switch results {
             case .success():
-                print("downloaded success!")
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
             case .failure(let error):
                 print(error)
             }
@@ -110,10 +110,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
             let downloadAction = UIAction(title: "Download", state: .off) { _ in
                 self?.downloadTitleAt(indexPath: indexPath)
             }
-            let downloadAction2 = UIAction(title: "Edit", state: .off) { _ in
-                print("Edit Tapped!")
-            }
-            return UIMenu(title: "", children: [downloadAction, downloadAction2])
+            return UIMenu(title: "", children: [downloadAction])
         }
         
         return config
