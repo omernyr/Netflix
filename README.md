@@ -1,0 +1,113 @@
+# Netflix Clone
+
+<hr>
+<h4 align="center">Netflix! a online movie app! <a href="https://github.com/omernyr/Netflix-Clone" target="_blank">NetflixClone</a>.</h4>
+
+<p align="center">
+  <img src="https://img.shields.io/github/commit-activity/y/omernyr/Netflix-Clone">
+  <img src="https://img.shields.io/github/license/omernyr/Netflix-Clone">
+</p>
+
+## Key Features
+
+* 8 Screen Design
+* Basket Mechanics
+* Search Mechanics
+* UI Test
+* MVVM Design Pattern
+* Controllers and ViewModels connected with Delegate and Closure's
+* Xib used for UI Design
+* Compatible with iOS 12.0+
+* IQKeyboardManager
+* Fakestore API used with Moya
+* Firebase Auth, Remote Config and Firestore
+* Lottie Animations
+* Fully SPM build
+* Live Video
+  - ![netflixclone](https://user-images.githubusercontent.com/89137487/222142185-5043dba9-35c0-4080-8a08-a67df49384df.gif)
+
+
+
+* Cross platform
+  - iOS, macOS ready.
+
+## Screenshots
+- <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png">
+
+(https://user-images.githubusercontent.com/89137487/222142921-9eb6c15d-1222-4be7-8b9f-84d99be434cf.png)
+(https://user-images.githubusercontent.com/89137487/222142959-fe4bca64-a4cb-4434-9dbf-880c1cf38815.png)
+(https://user-images.githubusercontent.com/89137487/222142968-2b0f5450-d23b-4b72-92e9-6c0da565755d.png)
+(https://user-images.githubusercontent.com/89137487/222143018-3396b0ff-6784-43c2-a3c0-dc5d5509a97a.png)
+(https://user-images.githubusercontent.com/89137487/222143040-763cd837-98a7-4f55-8498-cc51d5f4dcd3.png)
+(https://user-images.githubusercontent.com/89137487/222143082-e811d5bd-b40a-4286-a8d1-0ac50a1659e3.png)
+
+
+
+
+## Installation
+
+To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
+
+==========================================================================================
+ ```bash
+ # Clone this repository
+ $ git clone https://github.com/232-Pazarama-iOS-Swift-Bootcamp/week4_hw4-asimcanyagiz
+ ```
+ # Go into the repository
+ - open BazaarWay with xCode
+ 
+ # Go into xCode
+ - File > Packages > Reset Package Caches
+ - File > Packages > Resolve Package Versions
+ - File > Packages > Update to Latest Package Versions
+ 
+ # Go into xCode
+ - Wait till spm files builded. After than push cmd + r
+ 
+==========================================================================================
+
+
+## Download
+
+You can [download](https://github.com/asimcanyagiz/BazaarWay) the latest installable version of Calculator for macOS and Linux.
+
+## Technologies Used
+
+<table style"float:right;">
+  <tr>
+    <td><img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white"></td>
+    <td><img src="https://img.shields.io/badge/UIKit-043b5c?style=for-the-badge&logo=swift&logoColor=white"></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=red"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/IQKeyboardManager-298D46?style=for-the-badge&logoColor=white"/></td>
+    <td><img src="https://img.shields.io/badge/moya-cf2f74?style=for-the-badge&logoColor=red"/></td>
+    <td><img src="https://img.shields.io/badge/KingFisher-5091CD?style=for-the-badge&&logoColor=white"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/Auto_Layout-fbc093?style=for-the-badge&logo=swift&logoColor=white"/></td>
+  </tr>
+</table>
+
+## Credits
+
+Patika.dev - iOS Swift Pazarama Bootcamp
+
+## You may also like...
+
+- [Calculator](https://github.com/asimcanyagiz/iOS-Bootcamp-Week1) - A iOS Calculator
+- [dice-mania](https://github.com/asimcanyagiz/dice-mania) - Dice Mania
+- [Metunes](https://github.com/asimcanyagiz/Metunes) - Metunes
+- [Asian-Kitchen](https://github.com/asimcanyagiz/asian-kitchen) - Asian Kitchen Order Page
+- [Flickgram](https://github.com/asimcanyagiz/Flickgram) - Flickgram
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit)
+
+---
